@@ -11,7 +11,6 @@ module.exports = {
     'next/core-web-vitals',
     'plugin:@typescript-eslint/recommended',
     'prettier',
-
   ],
   rules: {
     'no-unused-vars': 'warn',
