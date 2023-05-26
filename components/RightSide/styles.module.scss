@@ -1,0 +1,10 @@
+@import "@/styles/variables.scss";
+
+.rightside {
+  width: 375px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
