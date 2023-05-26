@@ -1,12 +1,13 @@
 import React from 'react';
 
-import Layout from '@/components/Layout';
+import Content from '@/components/Content';
+import ItemsSection from '@/components/ItemsSection';
 
 function HomePage() {
   return (
-    <Layout>
-      <div>hello</div>
-    </Layout>
+    <Content>
+      <ItemsSection />
+    </Content>
   );
 }
 
