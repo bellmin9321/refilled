@@ -1,0 +1,24 @@
+@import "@/styles/variables.scss";
+
+.itemSection {
+  display: flex;
+  flex-direction: column;
+  margin: 26px 26px 12px 12px
+}
+
+.title {
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: $title;
+}
+
+.subTitle {
+  font-size: medium;
+  color: $subTitle;
+}
+
+.itemBox {
+  display: flex;
+  flex-direction: column;
+}
