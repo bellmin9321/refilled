@@ -4,7 +4,7 @@ import { useQuery } from 'react-query';
 import { getItems } from '@/lib/api';
 import { ItemType } from '@/types';
 
-function ItemsSection() {
+function ShopItemsSection() {
   const { data } = useQuery('items', getItems);
 
   return (
@@ -27,4 +27,4 @@ function ItemsSection() {
   );
 }
 
-export default ItemsSection;
+export default ShopItemsSection;

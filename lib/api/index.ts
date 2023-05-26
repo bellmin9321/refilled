@@ -7,7 +7,7 @@ export const getItems = async () => {
   };
 
   try {
-    const data = await fetch(`/api/items`, config).then((res) => res.json());
+    const data = await fetch('/api/items', config).then((res) => res.json());
 
     return data;
   } catch (error) {}

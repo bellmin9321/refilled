@@ -1,11 +1,11 @@
 import React from 'react';
 import Content from '@/components/Content';
-import ItemsSection from '@/components/ItemsSection';
+import ShopItemsSection from '@/components/ShopItemsSection';
 
 function Shop() {
   return (
     <Content>
-      <ItemsSection />
+      <ShopItemsSection />
     </Content>
   );
 }
