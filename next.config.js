@@ -7,6 +7,14 @@ const nextConfig = {
   },
   reactStrictMode: true,
   swcMinify: true,
+  async rewrites() {
+    return [
+      {
+        source: "/api/items",
+        destination: "https://file.refilled.co.kr/assignment/product.json",
+      },
+    ];
+   },
 };
 
 module.exports = nextConfig;
