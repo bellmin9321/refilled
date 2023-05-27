@@ -1,24 +1,31 @@
 @import "@/styles/variables.scss";
 
-.itemSection {
+.shopItemsBox {
   display: flex;
   flex-direction: column;
-  margin: 26px 26px 12px 12px
+  margin: 60px 16px 30px 16px;
+}
+
+.titleBox {
+  margin: 26px 0 26px 0;
 }
 
 .title {
-  font-size: large;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: $title;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: $text;
 }
 
 .subTitle {
-  font-size: medium;
-  color: $subTitle;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: $subText;
 }
 
-.itemBox {
-  display: flex;
-  flex-direction: column;
+.itemsGridBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7px;
 }
