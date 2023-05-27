@@ -1,13 +1,13 @@
 import { ItemProps } from '@/types';
 import React from 'react';
 import styles from './styles.module.scss';
-import { ModalHandler } from '@/context/ModalContext';
+import { modalHandler } from '@/context/ModalContext';
 
 function ShopItem({ item }: ItemProps) {
-  const { handleModal, selectItem } = ModalHandler();
+  const { openModal, selectItem } = modalHandler();
 
   const handleClick = () => {
-    handleModal();
+    openModal();
     selectItem(item);
   };
 

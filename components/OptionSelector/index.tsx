@@ -1,16 +1,17 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { ModalHandler } from '@/context/ModalContext';
+import { modalHandler } from '@/context/ModalContext';
 import { cartItemsHandler } from '@/context/CartItemsContext';
 import Link from 'next/link';
 
 function OptionSelector() {
-  const { selectedItem, modalType, handleModal, setModalType } = ModalHandler();
+  const { selectedItem, modalType, closeModal, setModalType, setOption } =
+    modalHandler();
   const { addItemToCart } = cartItemsHandler();
 
   const handleRoute = () => {
     setModalType('OPTION');
-    handleModal();
+    closeModal();
   };
 
   return (
@@ -32,9 +33,10 @@ function OptionSelector() {
           <select
             className={styles.select}
             name="tagOption"
+            onChange={(e) => setOption(e.target.value)}
             disabled={!selectedItem.productOptions.length}
           >
-            <option value="">
+            <option value="default">
               {`옵션 ${selectedItem.productOptions.length ? '선택' : '없음'}`}
             </option>
             {selectedItem.productOptions.map((option) => {

@@ -4,11 +4,14 @@ import { useContext, createContext } from 'react';
 
 const initialState = {
   modal: false,
-  selectedItem: {} as ItemType,
   modalType: '',
-  handleModal: () => {},
-  selectItem: (item: ItemType) => {},
+  selectedItem: {} as ItemType,
+  option: 'default',
+  openModal: () => {},
+  closeModal: () => {},
   setModalType: (state: string) => {},
+  selectItem: (item: ItemType) => {},
+  setOption: (state: string) => {},
 };
 
 const ModalContext = createContext(initialState);
@@ -20,22 +23,28 @@ export function ModalContextProvider({
 }) {
   const {
     modal,
-    selectedItem,
     modalType,
-    handleModal,
+    selectedItem,
+    option,
+    openModal,
+    closeModal,
     selectItem,
     setModalType,
+    setOption,
   } = useModal();
 
   return (
     <ModalContext.Provider
       value={{
         modal,
-        selectedItem,
         modalType,
-        handleModal,
+        selectedItem,
+        option,
+        openModal,
+        closeModal,
         selectItem,
         setModalType,
+        setOption,
       }}
     >
       {children}
@@ -43,6 +52,6 @@ export function ModalContextProvider({
   );
 }
 
-export const ModalHandler = () => {
+export const modalHandler = () => {
   return useContext(ModalContext);
 };

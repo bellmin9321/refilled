@@ -9,7 +9,7 @@ export interface ItemType {
   tag: TagType;
 }
 
-interface OptionType {
+export interface OptionType {
   id: number;
   name: string;
   price: number;

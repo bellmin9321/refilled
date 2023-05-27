@@ -26,9 +26,16 @@ function useModal() {
   const [modal, setModal] = useState<boolean>(false);
   const [modalType, setModalType] = useState<string>('OPTION');
   const [selectedItem, setSelectedItem] = useState<ItemType>(initialItem);
+  const [option, setOption] = useState<string>('default');
 
-  const handleModal = () => {
-    setModal(!modal);
+  const openModal = () => {
+    setModal(true);
+  };
+
+  const closeModal = () => {
+    setModalType('OPTION');
+    setOption('default');
+    setModal(false);
   };
 
   const selectItem = (item: ItemType) => {
@@ -37,11 +44,14 @@ function useModal() {
 
   return {
     modal,
-    selectedItem,
     modalType,
-    handleModal,
+    selectedItem,
+    option,
+    openModal,
+    closeModal,
     selectItem,
     setModalType,
+    setOption,
   };
 }
 
