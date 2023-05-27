@@ -25,7 +25,9 @@ function CartItemsSection() {
   return (
     <div className={styles.cartItemsSection}>
       {cart.length > 0 &&
-        cart.map((item: ItemType) => <CartItem key={item.id} item={item} />)}
+        cart.map((item: ItemType) => (
+          <CartItem key={`${item.id}-${item.option}`} item={item} />
+        ))}
     </div>
   );
 }
