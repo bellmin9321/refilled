@@ -1,15 +1,15 @@
 @import "@/styles/variables.scss";
 
-  .leftside {
-    margin-right: 31px;
-    font-weight: bold;
-    white-space: pre-line;
-    text-align: center;
-  }
+.leftside {
+  margin-right: 31px;
+  font-weight: bold;
+  white-space: pre-line;
+  text-align: center;
+}
 
 @media (max-width: 500px) {
   .leftside {
     width: 0;
-    color: white;
+    color: #f2f2f2;
   }
 }

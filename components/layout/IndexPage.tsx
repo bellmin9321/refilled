@@ -11,7 +11,7 @@ interface IndexPageProp {
 function IndexPage({ title, description, url, image }: IndexPageProp) {
   return (
     <Head>
-      <title>Refilled</title>
+      <title>리필드</title>
       <meta property="og:title" content={title || 'Meetion'} />
       <meta
         name="description"
