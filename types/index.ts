@@ -7,6 +7,7 @@ export interface ItemType {
   price: number;
   productOptions: OptionType[];
   tag: TagType;
+  option?: string;
 }
 
 export interface OptionType {

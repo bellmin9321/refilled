@@ -30,7 +30,7 @@ function CartItem({ item }: ItemProps) {
             </span>
           )}
           <div className={styles.name}>{item.name}</div>
-          <div className={styles.desc}>{item.desc}</div>
+          <div className={styles.option}>{item.option}</div>
           <div className={styles.priceBox}>
             <div
               className={styles.originPrice}
