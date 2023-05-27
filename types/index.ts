@@ -20,3 +20,7 @@ interface TagType {
   color: string;
   text: string;
 }
+
+export interface ItemProps {
+  item: ItemType;
+}
