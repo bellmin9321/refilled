@@ -4,6 +4,7 @@ import React, { createContext, useContext } from 'react';
 
 const CartItemsContext = createContext({
   cart: [] as ItemType[],
+  setCart: (state: ItemType[]) => {},
   addItemToCart: (item: ItemType) => {},
   deleteItemInCart: (item: ItemType) => {},
 });
@@ -13,11 +14,11 @@ export function CartItemsContextProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const { cart, addItemToCart, deleteItemInCart } = useCart();
+  const { cart, setCart, addItemToCart, deleteItemInCart } = useCart();
 
   return (
     <CartItemsContext.Provider
-      value={{ cart, addItemToCart, deleteItemInCart }}
+      value={{ cart, setCart, addItemToCart, deleteItemInCart }}
     >
       {children}
     </CartItemsContext.Provider>
