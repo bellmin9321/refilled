@@ -36,7 +36,7 @@ function OptionSelector() {
             onChange={(e) => setOption(e.target.value)}
             disabled={!selectedItem.productOptions.length}
           >
-            <option value="default">
+            <option value="">
               {`옵션 ${selectedItem.productOptions.length ? '선택' : '없음'}`}
             </option>
             {selectedItem.productOptions.map((option) => {

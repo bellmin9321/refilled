@@ -26,15 +26,15 @@ function useModal() {
   const [modal, setModal] = useState<boolean>(false);
   const [modalType, setModalType] = useState<string>('OPTION');
   const [selectedItem, setSelectedItem] = useState<ItemType>(initialItem);
-  const [option, setOption] = useState<string>('default');
+  const [option, setOption] = useState<string>('');
 
   const openModal = () => {
+    setOption('');
     setModal(true);
   };
 
   const closeModal = () => {
     setModalType('OPTION');
-    setOption('default');
     setModal(false);
   };
 

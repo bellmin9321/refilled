@@ -6,7 +6,7 @@ const initialState = {
   modal: false,
   modalType: '',
   selectedItem: {} as ItemType,
-  option: 'default',
+  option: '',
   openModal: () => {},
   closeModal: () => {},
   setModalType: (state: string) => {},
