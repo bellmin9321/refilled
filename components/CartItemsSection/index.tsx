@@ -13,10 +13,10 @@ function CartItemsSection() {
       <div className={styles.blankCartSection}>
         <h1>Refilled</h1>
         <div className={styles.subTitle}>
-          {`장바구니에 담긴 상품이 없습니다.\n상품을 추가해 보세요.`}
+          {`장바구니에 담긴 제품이 없습니다.\n제품을 추가해 보세요.`}
         </div>
         <Link href="/shop" className={styles.moveShop}>
-          상품 둘러보기
+          제품 둘러보기
         </Link>
       </div>
     );
