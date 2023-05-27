@@ -5,8 +5,14 @@ import { cartItemsHandler } from '@/context/CartItemsContext';
 import Link from 'next/link';
 
 function OptionSelector() {
-  const { selectedItem, modalType, closeModal, setModalType, setOption } =
-    modalHandler();
+  const {
+    selectedItem,
+    modalType,
+    option,
+    closeModal,
+    setModalType,
+    setOption,
+  } = modalHandler();
   const { addItemToCart } = cartItemsHandler();
 
   const handleRoute = () => {
@@ -21,6 +27,7 @@ function OptionSelector() {
           <div className={styles.imageBox}>
             <img src={selectedItem.imageUrl} width={150} height={150} />
             <div>{selectedItem.name}</div>
+            <span className={styles.option}>{option}</span>
             <span>장바구니에 상품이 담겼습니다.</span>
           </div>
           <Link href="/cart" className={styles.footer} onClick={handleRoute}>
