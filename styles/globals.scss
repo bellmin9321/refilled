@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  min-width: $mobile - 5px;
   font-family: $regular;
   margin: 0;
   padding: 0;
@@ -21,8 +22,7 @@ body {
   font-family: $regular;
   font-size: 1rem;
   color: $text;
-  background-color: #F2F2F2
-  ;
+  background-color: #F2F2F2;
 }
 
 #__next {
