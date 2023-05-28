@@ -4,9 +4,10 @@ import { cartItemsHandler } from '@/context/CartItemsContext';
 import { ItemType } from '@/types';
 import CartItem from '../CartItem';
 import Link from 'next/link';
+import useCart from '@/lib/hooks/useCart';
 
 function CartItemsSection() {
-  const { cart } = cartItemsHandler();
+  const { cart } = useCart();
 
   if (!cart.length) {
     return (
