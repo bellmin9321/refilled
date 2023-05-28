@@ -1,34 +1,107 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📝 **콘스탄트 과제**
 
-## Getting Started
+- Next.js & Typescript를 이용하여 진행했습니다.
+- SCSS를 이용하여 UI 디자인 작업을 했습니다.
+- ContextAPI를 활용하여 Clent State를 글로벌로 관리 했습니다.
+- React-query를 활용하여 Server State를 관리 했습니다.
 
-First, run the development server:
+<br />
 
-```bash
+## 🔑 **프로젝트 실행방법**
+
+```
+1. package 설치
+npm i
+
+2. 실행
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br />
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌈 기술 스택
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Next.js**
+- **Typescript**
+- **ContextAPI**
+- **React-query**
+- **SCSS**
 
-## Learn More
+  <br />
 
-To learn more about Next.js, take a look at the following resources:
+## ✳️ 중요사항 (6 / 6 완료)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [x] Next.js 사용
+- [x] SCSS 사용
+- [x] Noto Sans KR 폰트 사용
+- [x] redux / redux-toolkit / react-query 중 최소 1개 사용
+- [x] Github public 설정
+- [x] main, feature/test 2개의 브랜치 사용 및 PR
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<br />
 
-## Deploy on Vercel
+## ✅ TODO
+- 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<br />
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🗂️ 폴더 구조
+
+```
+├── components
+│   ├── CartFooter
+│   │   ├── index.tsx
+│   │   └── styles.module.scss
+│   ├── CartItem
+│   │   ├── index.tsx
+│   │   └── styles.module.scss
+│   ├── CartItemsSection
+│   │   ├── index.tsx
+│   │   └── styles.module.scss
+│   ├── Content
+│   │   ├── index.tsx
+│   │   └── styles.module.scss
+│   ├── Header
+│   │   ├── index.tsx
+│   │   └── styles.module.scss
+│   ├── Layout
+│   │   ├── IndexPage.tsx
+│   │   ├── index.tsx
+│   │   └── styles.module.scss
+│   ├── LeftSide
+│   │   ├── index.tsx
+│   │   └── styles.module.scss
+│   ├── ModalLayout
+│   │   ├── index.tsx
+│   │   └── styles.module.scss
+│   ├── OptionSelector
+│   │   ├── index.tsx
+│   │   └── styles.module.scss
+│   ├── RightSide
+│   │   ├── index.tsx
+│   │   └── styles.module.scss
+│   ├── ShopItem
+│   │   ├── index.tsx
+│   │   └── styles.module.scss
+│   └── ShopItemsSection
+│       ├── index.tsx
+│       └── styles.module.scss
+├── context
+│   ├── CartItemsContext.tsx
+│   └── ModalContext.tsx
+├── lib
+│   ├── api
+│   │   ├── index.ts
+│   │   └── queryClient.ts
+│   └── hooks
+│       ├── useCart.ts
+│       └── useModal.ts
+├── pages
+│   ├── 404.tsx
+│   ├── _app.tsx
+│   ├── cart
+│   │   └── index.tsx
+│   ├── index.tsx
+│   ├── page.module.css
+│   └── shop
+```
