@@ -1,20 +1,14 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { cartItemsHandler } from '@/context/CartItemsContext';
 import Link from 'next/link';
+import useCart from '@/lib/hooks/useCart';
 
 function CartFooter() {
-  const { cart, setCart } = cartItemsHandler();
-  const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
-
-  const handleClick = () => {
-    alert('구매를 완료하였습니다.');
-    setCart([]);
-  };
+  const { cart, totalPrice, buyAllInCart } = useCart();
 
   return (
     <div className={styles.footer}>
-      <Link href="/shop" className={styles.innerBox} onClick={handleClick}>
+      <Link href="/shop" className={styles.innerBox} onClick={buyAllInCart}>
         <span className={styles.totalPrice}>{`${
           cart.length
         }개 | ${totalPrice.toLocaleString('ko-KR')}원`}</span>
