@@ -2,10 +2,10 @@ import { ItemProps } from '@/types';
 import React from 'react';
 import styles from './styles.module.scss';
 import { IoMdClose } from 'react-icons/io';
-import { cartItemsHandler } from '@/context/CartItemsContext';
+import useCart from '@/lib/hooks/useCart';
 
 function CartItem({ item }: ItemProps) {
-  const { deleteItemInCart } = cartItemsHandler();
+  const { deleteItemInCart } = useCart();
 
   return (
     <div className={styles.itemLayout}>
