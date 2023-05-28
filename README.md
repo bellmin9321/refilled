@@ -2,7 +2,7 @@
 
 - Next.js & Typescript를 이용하여 진행했습니다.
 - SCSS를 이용하여 UI 디자인 작업을 했습니다.
-- ContextAPI를 활용하여 Client State를 글로벌로 관리 했습니다.
+- ContextAPI를 활용하여 Clent State를 글로벌로 관리 했습니다. -> **redux, redux-toolkit로 마이그레이션 진행**
 - React-query를 활용하여 Server State를 관리 했습니다.
 <br />
 
@@ -21,7 +21,7 @@ npm run dev
 
 - **Next.js**
 - **Typescript**
-- **ContextAPI**
+- ContextAPI -> **Redux, RTK, redux-persist**
 - **React-query**
 - **SCSS**
 
@@ -41,7 +41,7 @@ npm run dev
 
 ### **기본 설정**
 - prettier / eslint 설정
-- ContextAPI / React-query provider 설정
+- redux / redux-persist / React-query provider 설정
 - next.config.js에서 rewrite을 이용한 cors 우회
 - 디스플레이 width 375px을 기준으로 반응형 css 작업
 ### **제품 리스트(`/shop`) 페이지**
@@ -84,6 +84,8 @@ https://github.com/bellmin9321/refilled/assets/49411767/c2a3a9b3-8337-4ee8-8142-
 
 ## ⚠️ Note
 - Typescript를 사용하여 컴파일 시 정적 타입을 검사함으로써 런타임시 발생할 수 있는 에러를 사전에 방지할 수 있습니다.
+- 처음에 contextAPI를 이용하여 전역 상태 관리를 진행했다가 불필요한 re-rendering 이슈로 redux / RTK / redux-persist로 마이그레이션을 진행했습니다.
+- 커스텀 훅(useModal, useCart)을 사용하여 redux 상태를 효율적으로 관리했습니다.
 
 ## 🗂️ 폴더 구조
 
