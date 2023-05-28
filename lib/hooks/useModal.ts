@@ -41,6 +41,10 @@ function useModal() {
     dispatch(setOption(''));
   };
 
+  const selectOption = (option: string) => {
+    dispatch(setOption(option));
+  };
+
   return {
     isOpen,
     modalType,
@@ -48,6 +52,7 @@ function useModal() {
     option,
     handleOpenModal,
     handleCloseModal,
+    selectOption,
   };
 }
 
