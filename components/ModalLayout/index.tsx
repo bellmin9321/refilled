@@ -1,17 +1,12 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { modalHandler } from '@/context/ModalContext';
+import useModal from '@/lib/hooks/useModal';
 
 function ModalLayout({ children }: { children: React.ReactNode }) {
-  const { closeModal, setOption } = modalHandler();
-
-  const handleClick = () => {
-    closeModal();
-    setOption('');
-  };
+  const { handleCloseModal } = useModal();
 
   return (
-    <div className={styles.modalLayout} onClick={handleClick}>
+    <div className={styles.modalLayout} onClick={handleCloseModal}>
       <div
         className={styles.modalContentBox}
         onClick={(e) => e.stopPropagation()}

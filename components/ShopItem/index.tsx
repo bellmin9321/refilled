@@ -1,18 +1,17 @@
 import { ItemProps } from '@/types';
 import React from 'react';
 import styles from './styles.module.scss';
-import { modalHandler } from '@/context/ModalContext';
+import useModal from '@/lib/hooks/useModal';
 
 function ShopItem({ item }: ItemProps) {
-  const { openModal, selectItem } = modalHandler();
-
-  const handleClick = () => {
-    openModal();
-    selectItem(item);
-  };
+  const { handleOpenModal } = useModal();
 
   return (
-    <div key={item.id} className={styles.itemBox} onClick={handleClick}>
+    <div
+      key={item.id}
+      className={styles.itemBox}
+      onClick={() => handleOpenModal(item)}
+    >
       <img width={168} height={168} src={item.imageUrl} />
       {item.tag.text && (
         <span

@@ -6,10 +6,10 @@ import { ItemType } from '@/types';
 import ShopItem from '../ShopItem';
 import ModalLayout from '../ModalLayout';
 import OptionSelector from '../OptionSelector';
-import { modalHandler } from '@/context/ModalContext';
+import useModal from '@/lib/hooks/useModal';
 
 function ShopItemsSection() {
-  const { modal } = modalHandler();
+  const { isOpen } = useModal();
   const { data } = useQuery('items', getItems);
 
   return (
@@ -26,7 +26,7 @@ function ShopItemsSection() {
             ))}
         </div>
       </div>
-      {modal && (
+      {isOpen && (
         <ModalLayout>
           <OptionSelector />
         </ModalLayout>
