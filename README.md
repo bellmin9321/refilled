@@ -21,7 +21,7 @@ npm run dev
 
 - **Next.js**
 - **Typescript**
-- ContextAPI -> **Redux, RTK, redux-persist**
+- ContextAPI -> **Redux, RTK, redux-persist 마이그레이션**
 - **React-query**
 - **SCSS**
 
@@ -56,6 +56,13 @@ npm run dev
 
 <br />
 
+## ⚠️ Note
+- Typescript를 사용하여 컴파일 시 정적 타입을 검사함으로써 런타임시 발생할 수 있는 에러를 사전에 방지할 수 있습니다.
+- 처음에 contextAPI를 이용하여 전역 상태 관리를 진행했다가 불필요한 re-rendering 이슈로 redux / RTK / redux-persist로 마이그레이션을 진행했습니다.
+- 커스텀 훅(useModal, useCart)을 사용하여 redux 상태를 효율적으로 관리했습니다.
+
+<br />
+
 ## 📹 Video
 
 https://github.com/bellmin9321/refilled/assets/49411767/c2a3a9b3-8337-4ee8-8142-2c7b9c264663
@@ -81,11 +88,6 @@ https://github.com/bellmin9321/refilled/assets/49411767/c2a3a9b3-8337-4ee8-8142-
 
 ### - 장바구니에 담기 버튼 클릭 시 모달 화면
 <img width="250" alt="image" src="https://github.com/bellmin9321/refilled/assets/49411767/b8122406-4de1-461f-a032-688e259fe299">
-
-## ⚠️ Note
-- Typescript를 사용하여 컴파일 시 정적 타입을 검사함으로써 런타임시 발생할 수 있는 에러를 사전에 방지할 수 있습니다.
-- 처음에 contextAPI를 이용하여 전역 상태 관리를 진행했다가 불필요한 re-rendering 이슈로 redux / RTK / redux-persist로 마이그레이션을 진행했습니다.
-- 커스텀 훅(useModal, useCart)을 사용하여 redux 상태를 효율적으로 관리했습니다.
 
 ## 🗂️ 폴더 구조
 
