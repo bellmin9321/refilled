@@ -1,3 +1,5 @@
+import { PersistState } from 'redux-persist';
+
 export interface ItemType {
   id: number;
   name: string;
@@ -25,3 +27,26 @@ interface TagType {
 export interface ItemProps {
   item: ItemType;
 }
+
+export interface StateType {
+  cart: ItemType[];
+  modal: ModalType;
+  _persist: PersistState;
+}
+
+export interface ModalActionStringType {
+  type: string;
+  payload: string;
+}
+
+export interface ModalActionItemType {
+  type: string;
+  payload: ItemType;
+}
+
+export type ModalType = {
+  isOpen: boolean;
+  modalType: string;
+  selectedItem: ItemType;
+  option: string;
+};
