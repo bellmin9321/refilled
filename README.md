@@ -2,7 +2,7 @@
 
 - Next.js & Typescript를 이용하여 진행했습니다.
 - SCSS를 이용하여 UI 디자인 작업을 했습니다.
-- ContextAPI를 활용하여 Clent State를 글로벌로 관리 했습니다.
+- ContextAPI를 활용하여 Client State를 글로벌로 관리 했습니다.
 - React-query를 활용하여 Server State를 관리 했습니다.
 <br />
 
@@ -24,7 +24,8 @@ npm run dev
 - **ContextAPI**
 - **React-query**
 - **SCSS**
-  <br />
+
+<br />
 
 ## ✳️ 중요사항 (6 / 6 완료)
 
