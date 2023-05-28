@@ -1,10 +1,13 @@
-import { modalHandler } from '@/context/ModalContext';
-import { ItemType } from '@/types';
-import { useState } from 'react';
+import { ItemType, StateType } from '@/types';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { setCart, setModalType } from '@/store/reducers';
 
 function useCart() {
-  const [cart, setCart] = useState<ItemType[]>([]);
-  const { option, setModalType } = modalHandler();
+  const dispatch = useDispatch();
+  const cart = useSelector((state: StateType) => state.cart);
+  const { option } = useSelector((state: StateType) => state.modal);
+  const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
 
   const addItemToCart = (item: ItemType) => {
     const newCart = [...cart];
@@ -22,19 +25,27 @@ function useCart() {
       return;
     }
 
-    setCart([...newCart, { ...item, option }]);
-    setModalType('CART');
+    dispatch(setCart([...newCart, { ...item, option }]));
+    dispatch(setModalType('CART'));
   };
 
   const deleteItemInCart = (item: ItemType) => {
     const newCart = [...cart];
-    const index = newCart.findIndex((v) => v.id === item.id);
+    const index = newCart.findIndex(
+      (v) => v.id === item.id && v.option === item.option,
+    );
+
     newCart.splice(index, 1);
 
-    setCart(newCart);
+    dispatch(setCart(newCart));
   };
 
-  return { cart, setCart, addItemToCart, deleteItemInCart };
+  const buyAllInCart = () => {
+    dispatch(setCart([]));
+    alert('구매를 완료하였습니다.');
+  };
+
+  return { cart, totalPrice, addItemToCart, deleteItemInCart, buyAllInCart };
 }
 
 export default useCart;
