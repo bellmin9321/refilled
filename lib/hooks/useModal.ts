@@ -1,5 +1,8 @@
-import { ItemType } from '@/types';
+import { closeModal, openModal, selectItem, setOption } from '@/store/reducers';
+import { ItemType, StateType } from '@/types';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 export const initialItem = {
   id: 0,
@@ -23,35 +26,28 @@ export const initialItem = {
 };
 
 function useModal() {
-  const [modal, setModal] = useState<boolean>(false);
-  const [modalType, setModalType] = useState<string>('OPTION');
-  const [selectedItem, setSelectedItem] = useState<ItemType>(initialItem);
-  const [option, setOption] = useState<string>('');
+  const dispatch = useDispatch();
+  const { isOpen, selectedItem, modalType, option } = useSelector(
+    (state: StateType) => state.modal,
+  );
 
-  const openModal = () => {
-    setOption('');
-    setModal(true);
+  const handleOpenModal = (item: ItemType) => {
+    dispatch(openModal());
+    dispatch(selectItem(item));
   };
 
-  const closeModal = () => {
-    setModalType('OPTION');
-    setModal(false);
-  };
-
-  const selectItem = (item: ItemType) => {
-    setSelectedItem(item);
+  const handleCloseModal = () => {
+    dispatch(closeModal());
+    dispatch(setOption(''));
   };
 
   return {
-    modal,
+    isOpen,
     modalType,
     selectedItem,
     option,
-    openModal,
-    closeModal,
-    selectItem,
-    setModalType,
-    setOption,
+    handleOpenModal,
+    handleCloseModal,
   };
 }
 
