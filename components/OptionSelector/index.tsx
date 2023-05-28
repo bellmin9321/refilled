@@ -1,24 +1,13 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { modalHandler } from '@/context/ModalContext';
-import { cartItemsHandler } from '@/context/CartItemsContext';
 import Link from 'next/link';
+import useCart from '@/lib/hooks/useCart';
+import useModal from '@/lib/hooks/useModal';
 
 function OptionSelector() {
-  const {
-    selectedItem,
-    modalType,
-    option,
-    closeModal,
-    setModalType,
-    setOption,
-  } = modalHandler();
-  const { addItemToCart } = cartItemsHandler();
-
-  const handleRoute = () => {
-    setModalType('OPTION');
-    closeModal();
-  };
+  const { selectedItem, modalType, option, handleCloseModal, selectOption } =
+    useModal();
+  const { addItemToCart } = useCart();
 
   return (
     <>
@@ -30,7 +19,11 @@ function OptionSelector() {
             <span className={styles.option}>{option}</span>
             <span>장바구니에 상품이 담겼습니다.</span>
           </div>
-          <Link href="/cart" className={styles.footer} onClick={handleRoute}>
+          <Link
+            href="/cart"
+            className={styles.footer}
+            onClick={handleCloseModal}
+          >
             바로가기
           </Link>
         </div>
@@ -40,7 +33,7 @@ function OptionSelector() {
           <select
             className={styles.select}
             name="tagOption"
-            onChange={(e) => setOption(e.target.value)}
+            onChange={(e) => selectOption(e.target.value)}
             disabled={!selectedItem.productOptions.length}
           >
             <option value="">
