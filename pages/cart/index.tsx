@@ -1,7 +1,8 @@
 import React from 'react';
+
 import CartFooter from '@/components/CartFooter';
-import Content from '@/components/Content';
 import CartItemsSection from '@/components/CartItemsSection';
+import Content from '@/components/Content';
 
 function Cart() {
   return (
