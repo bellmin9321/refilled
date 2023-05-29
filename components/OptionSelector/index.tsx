@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -16,7 +17,14 @@ function OptionSelector() {
       {modalType === 'CART' ? (
         <div className={styles.confirmCartBox}>
           <div className={styles.imageBox}>
-            <img src={selectedItem.imageUrl} width={150} height={150} />
+            <Image
+              src={selectedItem.imageUrl}
+              width={150}
+              height={150}
+              alt="item"
+              placeholder="empty"
+              priority={true}
+            />
             <div>{selectedItem.name}</div>
             <span className={styles.option}>{option}</span>
             <span>장바구니에 상품이 담겼습니다.</span>

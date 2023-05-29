@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 import styles from './styles.module.scss';
@@ -15,7 +16,14 @@ function ShopItem({ item }: ItemProps) {
       className={styles.itemBox}
       onClick={() => handleOpenModal(item)}
     >
-      <img width={168} height={168} src={item.imageUrl} />
+      <Image
+        width={168}
+        height={168}
+        src={item.imageUrl}
+        alt="item"
+        placeholder="empty"
+        priority={true}
+      />
       {item.tag.text && (
         <span
           className={styles.tag}

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import { IoMdClose } from 'react-icons/io';
 
@@ -13,11 +14,14 @@ function CartItem({ item }: ItemProps) {
   return (
     <div className={styles.itemLayout}>
       <div key={item.id} className={styles.itemBox}>
-        <img
+        <Image
           src={item.imageUrl}
           className={styles.image}
           width={60}
           height={60}
+          alt="item"
+          placeholder="empty"
+          priority={true}
         />
         <div>
           {item.tag.text && (
