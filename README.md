@@ -40,14 +40,16 @@ npm run dev
 ## ✅ TODO
 
 ### **기본 설정**
-- prettier / eslint 설정
-- redux / redux-persist / React-query provider 설정
-- next.config.js에서 rewrite을 이용한 cors 우회
+- prettier / eslint / stylelint 설정
+- redux / redux-persist / react-query provider 설정
+- next.config.js 설정
+  - rewrite을 이용한 cors 우회
+  - 이미지 최적화(next/image 사용)를 위한 remotePatterns 설정
 - 디스플레이 width 375px을 기준으로 반응형 css 작업
 ### **제품 리스트(`/shop`) 페이지**
 - 제품 클릭 시 모달 구현
-- 상품 옵션 여부에 따른 모달의 select 문구 변경
-- 모달의 장바구니 담기 클릭 시 장바구니(`/cart`) 페이지에 해당 제품 추가
+- 모달 내 상품 옵션 여부에 따른 select 문구 변경
+- 모달 내 장바구니 담기 클릭 시 장바구니(`/cart`) 페이지에 해당 제품 추가
 - grid css 작업
 ### **장바구니(`/cart`) 페이지**
 - 장바구니 페이지(`/cart`)에서 X 버튼 클릭 시 해당 제품 삭제
