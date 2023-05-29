@@ -1,57 +1,59 @@
-import useModal from '@/lib/hooks/useModal';
-import { ItemType } from '@/types';
-import { useContext, createContext } from 'react';
+// import { createContext, useContext } from 'react';
 
-const initialState = {
-  modal: false,
-  modalType: '',
-  selectedItem: {} as ItemType,
-  option: '',
-  openModal: () => {},
-  closeModal: () => {},
-  setModalType: (state: string) => {},
-  selectItem: (item: ItemType) => {},
-  setOption: (state: string) => {},
-};
+// import useModal from '@/lib/hooks/useModal';
 
-const ModalContext = createContext(initialState);
+// import { ItemType } from '@/types';
 
-export function ModalContextProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const {
-    modal,
-    modalType,
-    selectedItem,
-    option,
-    openModal,
-    closeModal,
-    selectItem,
-    setModalType,
-    setOption,
-  } = useModal();
+// const initialState = {
+//   modal: false,
+//   modalType: '',
+//   selectedItem: {} as ItemType,
+//   option: '',
+//   openModal: () => {},
+//   closeModal: () => {},
+//   setModalType: (state: string) => {},
+//   selectItem: (item: ItemType) => {},
+//   setOption: (state: string) => {},
+// };
 
-  return (
-    <ModalContext.Provider
-      value={{
-        modal,
-        modalType,
-        selectedItem,
-        option,
-        openModal,
-        closeModal,
-        selectItem,
-        setModalType,
-        setOption,
-      }}
-    >
-      {children}
-    </ModalContext.Provider>
-  );
-}
+// const ModalContext = createContext(initialState);
 
-export const modalHandler = () => {
-  return useContext(ModalContext);
-};
+// export function ModalContextProvider({
+//   children,
+// }: {
+//   children: React.ReactNode;
+// }) {
+//   const {
+//     modal,
+//     modalType,
+//     selectedItem,
+//     option,
+//     openModal,
+//     closeModal,
+//     selectItem,
+//     setModalType,
+//     setOption,
+//   } = useModal();
+
+//   return (
+//     <ModalContext.Provider
+//       value={{
+//         modal,
+//         modalType,
+//         selectedItem,
+//         option,
+//         openModal,
+//         closeModal,
+//         selectItem,
+//         setModalType,
+//         setOption,
+//       }}
+//     >
+//       {children}
+//     </ModalContext.Provider>
+//   );
+// }
+
+// export const modalHandler = () => {
+//   return useContext(ModalContext);
+// };
