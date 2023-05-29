@@ -1,8 +1,11 @@
-import { ItemProps } from '@/types';
 import React from 'react';
-import styles from './styles.module.scss';
 import { IoMdClose } from 'react-icons/io';
+
+import styles from './styles.module.scss';
+
 import useCart from '@/lib/hooks/useCart';
+
+import { ItemProps } from '@/types';
 
 function CartItem({ item }: ItemProps) {
   const { deleteItemInCart } = useCart();

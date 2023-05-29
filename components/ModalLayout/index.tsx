@@ -1,5 +1,7 @@
 import React from 'react';
+
 import styles from './styles.module.scss';
+
 import useModal from '@/lib/hooks/useModal';
 
 function ModalLayout({ children }: { children: React.ReactNode }) {

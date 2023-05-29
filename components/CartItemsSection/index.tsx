@@ -1,10 +1,13 @@
-import React from 'react';
-import styles from './styles.module.scss';
-import { cartItemsHandler } from '@/context/CartItemsContext';
-import { ItemType } from '@/types';
-import CartItem from '../CartItem';
 import Link from 'next/link';
+import React from 'react';
+
+import styles from './styles.module.scss';
+
 import useCart from '@/lib/hooks/useCart';
+
+import CartItem from '../CartItem';
+
+import { ItemType } from '@/types';
 
 function CartItemsSection() {
   const { cart } = useCart();

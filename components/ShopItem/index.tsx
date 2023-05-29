@@ -1,7 +1,10 @@
-import { ItemProps } from '@/types';
 import React from 'react';
+
 import styles from './styles.module.scss';
+
 import useModal from '@/lib/hooks/useModal';
+
+import { ItemProps } from '@/types';
 
 function ShopItem({ item }: ItemProps) {
   const { handleOpenModal } = useModal();

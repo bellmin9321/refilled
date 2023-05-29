@@ -1,8 +1,9 @@
-import React from 'react';
-import styles from './styles.module.scss';
-import { FiShoppingCart } from 'react-icons/fi';
-import { AiOutlineMenu } from 'react-icons/ai';
 import Link from 'next/link';
+import React from 'react';
+import { AiOutlineMenu } from 'react-icons/ai';
+import { FiShoppingCart } from 'react-icons/fi';
+
+import styles from './styles.module.scss';
 
 function Header() {
   return (

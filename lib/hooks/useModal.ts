@@ -1,8 +1,9 @@
-import { closeModal, openModal, selectItem, setOption } from '@/store/reducers';
-import { ItemType, StateType } from '@/types';
-import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
+
+import { closeModal, openModal, selectItem, setOption } from '@/store/reducers';
+
+import { ItemType, StateType } from '@/types';
 
 export const initialItem = {
   id: 0,

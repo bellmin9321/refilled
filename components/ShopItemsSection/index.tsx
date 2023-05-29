@@ -1,12 +1,16 @@
 import React from 'react';
-import styles from './styles.module.scss';
 import { useQuery } from 'react-query';
+
+import styles from './styles.module.scss';
+
 import { getItems } from '@/lib/api';
-import { ItemType } from '@/types';
-import ShopItem from '../ShopItem';
+import useModal from '@/lib/hooks/useModal';
+
 import ModalLayout from '../ModalLayout';
 import OptionSelector from '../OptionSelector';
-import useModal from '@/lib/hooks/useModal';
+import ShopItem from '../ShopItem';
+
+import { ItemType } from '@/types';
 
 function ShopItemsSection() {
   const { isOpen } = useModal();

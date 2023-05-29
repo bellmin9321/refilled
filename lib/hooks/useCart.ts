@@ -1,7 +1,9 @@
-import { ItemType, StateType } from '@/types';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
+
 import { setCart, setModalType } from '@/store/reducers';
+
+import { ItemType, StateType } from '@/types';
 
 function useCart() {
   const dispatch = useDispatch();
