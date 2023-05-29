@@ -1,13 +1,13 @@
-@import "@/styles/variables.scss";
+@import "@/styles/variables";
 
-.confirmCartBox {
-  margin: 0 15px 0 15px;
+.confirm-cart-box {
+  margin: 0 15px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.imageBox {
+.image-box {
   > img {
     margin-bottom: 10px;
   }
@@ -34,8 +34,8 @@
   font-size: large;
 }
 
-.optionSelectBox {
-  margin: 0 15px 0 15px;
+.option-select-box {
+  margin: 0 15px;
 }
 
 .title {

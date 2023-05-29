@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 
 function Header() {
   return (
-    <div className={styles.headerLayout}>
+    <div className={styles['header-layout']}>
       <header className={styles.header}>
         <Link className={styles.shop} href="/shop">
           <AiOutlineMenu size={25} />

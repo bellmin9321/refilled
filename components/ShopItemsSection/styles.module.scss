@@ -1,13 +1,13 @@
-@import "@/styles/variables.scss";
+@import "@/styles/variables";
 
-.shopItemsBox {
+.shop-items-box {
   display: flex;
   flex-direction: column;
-  margin: 60px 16px 30px 16px;
+  margin: 60px 16px 30px;
 }
 
-.titleBox {
-  margin: 26px 0 26px 0;
+.title-box {
+  margin: 26px 0;
 }
 
 .title {
@@ -17,16 +17,15 @@
   color: $text;
 }
 
-.subTitle {
+.sub-title {
   font-weight: 600;
   font-size: 20px;
   line-height: 30px;
   color: $subText;
 }
 
-.itemsGridBox {
+.items-grid-box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 7px;
-  grid-row-gap: 32px;
+  grid-gap: 32px 7px;
 }

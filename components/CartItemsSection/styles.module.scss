@@ -1,17 +1,17 @@
-@import "@/styles/variables.scss";
+@import "@/styles/variables";
 
-.cartItemsSection {
+.cart-items-section {
   display: flex;
   flex-direction: column;
-  margin: 60px 0 120px 0;
+  margin: 60px 0 120px;
 }
 
-.subTitle {
+.sub-title {
   white-space: pre-line;
   text-align: center;
 }
 
-.blankCartSection {
+.blank-cart-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +19,7 @@
   margin-top: 250px;
 }
 
-.moveShop {
+.move-shop {
   display: flex;
   justify-content: center;
   align-items: center;

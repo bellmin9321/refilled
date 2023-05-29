@@ -12,8 +12,8 @@ function CartItem({ item }: ItemProps) {
   const { deleteItemInCart } = useCart();
 
   return (
-    <div className={styles.itemLayout}>
-      <div key={item.id} className={styles.itemBox}>
+    <div className={styles['item-layout']}>
+      <div key={item.id} className={styles['item-box']}>
         <Image
           src={item.imageUrl}
           className={styles.image}
@@ -38,9 +38,9 @@ function CartItem({ item }: ItemProps) {
           )}
           <div className={styles.name}>{item.name}</div>
           <div className={styles.option}>{item.option}</div>
-          <div className={styles.priceBox}>
+          <div className={styles['price-box']}>
             <div
-              className={styles.originPrice}
+              className={styles['origin-price']}
             >{`${item.originPrice.toLocaleString('ko-KR')}원`}</div>
             <div>
               <span className={styles.percent}>

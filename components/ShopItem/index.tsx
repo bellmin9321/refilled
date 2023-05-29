@@ -13,7 +13,7 @@ function ShopItem({ item }: ItemProps) {
   return (
     <div
       key={item.id}
-      className={styles.itemBox}
+      className={styles['item-box']}
       onClick={() => handleOpenModal(item)}
     >
       <Image
@@ -38,9 +38,9 @@ function ShopItem({ item }: ItemProps) {
       )}
       <div className={styles.name}>{item.name}</div>
       <div className={styles.desc}>{item.desc}</div>
-      <div className={styles.originPrice}>{`${item.originPrice.toLocaleString(
-        'ko-KR',
-      )}원`}</div>
+      <div
+        className={styles['origin-price']}
+      >{`${item.originPrice.toLocaleString('ko-KR')}원`}</div>
       <div>
         <span className={styles.percent}>
           {`${100 - Math.floor((item.price / item.originPrice) * 100)}%`}

@@ -18,12 +18,12 @@ function ShopItemsSection() {
 
   return (
     <>
-      <div className={styles.shopItemsBox}>
-        <div className={styles.titleBox}>
+      <div className={styles['shop-items-box']}>
+        <div className={styles['title-box']}>
           <div className={styles.title}>사이토카인.</div>
-          <div className={styles.subTitle}>완벽한 탈모케어를 위한 선택</div>
+          <div className={styles['sub-title']}>완벽한 탈모케어를 위한 선택</div>
         </div>
-        <div className={styles.itemsGridBox}>
+        <div className={styles['items-grid-box']}>
           {data &&
             data.map((item: ItemType) => (
               <ShopItem key={item.id} item={item} />

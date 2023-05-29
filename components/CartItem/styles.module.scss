@@ -1,12 +1,12 @@
-@import "@/styles/variables.scss";
+@import "@/styles/variables";
 
-.itemLayout {
+.item-layout {
   display: flex;
   flex-direction: row;
-  margin: 40px 40px 0 40px;
+  margin: 40px 40px 0;
 }
 
-.itemBox {
+.item-box {
   display: flex;
 }
 
@@ -42,16 +42,16 @@
   margin-bottom: 10px;
 }
 
-.priceBox {
+.price-box {
   float: right;
 }
 
-.originPrice {
+.origin-price {
   float: right;
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
-  color: #666666;
+  color: #666;
   text-decoration: line-through;
   margin-bottom: 4px;
 }
@@ -60,7 +60,7 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 16px;
-  color: #333333;
+  color: #333;
 }
 
 .percent {

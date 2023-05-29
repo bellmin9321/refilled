@@ -15,8 +15,8 @@ function OptionSelector() {
   return (
     <>
       {modalType === 'CART' ? (
-        <div className={styles.confirmCartBox}>
-          <div className={styles.imageBox}>
+        <div className={styles['confirm-cart-box']}>
+          <div className={styles['image-box']}>
             <Image
               src={selectedItem.imageUrl}
               width={150}
@@ -38,7 +38,7 @@ function OptionSelector() {
           </Link>
         </div>
       ) : (
-        <div className={styles.optionSelectBox}>
+        <div className={styles['option-select-box']}>
           <div className={styles.title}>{selectedItem.name}</div>
           <select
             className={styles.select}

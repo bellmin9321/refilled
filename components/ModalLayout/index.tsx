@@ -8,9 +8,9 @@ function ModalLayout({ children }: { children: React.ReactNode }) {
   const { handleCloseModal } = useModal();
 
   return (
-    <div className={styles.modalLayout} onClick={handleCloseModal}>
+    <div className={styles['modal-layout']} onClick={handleCloseModal}>
       <div
-        className={styles.modalContentBox}
+        className={styles['modal-content-box']}
         onClick={(e) => e.stopPropagation()}
       >
         {children}
