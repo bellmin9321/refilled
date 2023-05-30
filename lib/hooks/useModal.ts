@@ -5,27 +5,6 @@ import { closeModal, openModal, selectItem, setOption } from '@/store/reducers';
 
 import { ItemType, StateType } from '@/types';
 
-export const initialItem = {
-  id: 0,
-  name: '',
-  imageUrl: '',
-  desc: '',
-  originPrice: 0,
-  price: 0,
-  productOptions: [
-    {
-      id: 0,
-      name: '',
-      price: 0,
-      stock: 0,
-    },
-  ],
-  tag: {
-    color: '',
-    text: '',
-  },
-};
-
 function useModal() {
   const dispatch = useDispatch();
   const { isOpen, selectedItem, modalType, option } = useSelector(
