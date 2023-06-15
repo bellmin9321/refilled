@@ -1,0 +1,62 @@
+@import "@/styles/variables";
+
+.item-box {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  
+  :hover {
+    opacity: 0.7;
+  }
+}
+
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 10px;
+  width: 38px;
+  height: 18px;
+  margin: 12px 0 2px;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $text;
+  margin-bottom: 2px;
+}
+
+.desc {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: $subText;
+  margin-bottom: 8px;
+}
+
+.origin-price {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: $subText;
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.percent {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  color: $percent;
+  margin-right: 4px;
+}

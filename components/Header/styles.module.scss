@@ -1,0 +1,50 @@
+@import "@/styles/variables";
+
+.header-layout {
+  position: absolute;
+  top: 0;
+  width: $mobile;
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px black solid;
+  border-top: 1px black solid;
+}
+
+.shop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 100%;
+  border-right: 1px black solid;
+  color: #1a1a1a;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 255px;
+  height: 100%;
+  font-size: xx-large;
+  font-weight: bold;
+  color: $text;
+}
+
+.cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 100%;
+  border-left: 1px black solid;
+  color: #1a1a1a;
+}

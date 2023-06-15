@@ -1,0 +1,16 @@
+@import "@/styles/variables";
+
+.leftside {
+  margin-right: 31px;
+  font-weight: bold;
+  white-space: pre-line;
+  text-align: center;
+  width: 135px;
+}
+
+@media (max-width: $mobile) {
+  .leftside {
+    width: 0;
+    color: #f2f2f2;
+  }
+}
